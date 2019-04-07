@@ -4,7 +4,7 @@ var router = express.Router();
 
 //requiring the needed controllers and modules.
 
-var controller = require("../../controllers/projectsController");
+var controller = require("../../controllers/projects.controller");
 
 console.log("Inside admin routes");
 
