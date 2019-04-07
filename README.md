@@ -1,6 +1,5 @@
 # Project Title
-Life Management
-
+Manage your life
 ## Description 
 This project helps you to manage your life, fully customized, customized categroies, track your tasks,
 measure how productive you are, etc.
