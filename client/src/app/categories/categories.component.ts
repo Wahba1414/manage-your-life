@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 // importing interfaces.
 import Category from './category.interface';
 
+
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -10,7 +11,6 @@ import Category from './category.interface';
 })
 export class CategoriesComponent implements OnInit {
   constructor() { }
-
   categories: Category[];
 
   ngOnInit() {

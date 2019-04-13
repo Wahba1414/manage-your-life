@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+
+// Icons.
+
+
+// Importing app modules
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -18,7 +23,7 @@ import { CoreComponent } from './core/core.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
