@@ -2,3 +2,13 @@
     /* border: 2px solid #17a2b8; */
     /* padding: 20px; */
 }
+
+.custom-select{
+    width:60px;
+    height: 35px;
+}
+
+.custom-label{
+    font-size: 15px;
+    font-weight: bold
+}

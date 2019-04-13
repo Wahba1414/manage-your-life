@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.main-color{
+    color: #2199e8 !important
+}
+
+.main-color-bg{
+    background-color: #2199e8 !important
+}
+
+.main-color-border{
+    border:2px solid #2199e8 !important
+}

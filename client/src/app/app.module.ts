@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 // Icons.
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+// Pagination.
+import {NgxPaginationModule} from 'ngx-pagination';
 
 // Importing app modules
 import { AppComponent } from './app.component';
@@ -25,7 +27,8 @@ import { CoreComponent } from './core/core.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -36,6 +36,66 @@ export class CategoriesComponent implements OnInit {
         color:'blue',
         number:2,
         description:'Manging personal tasks'
+      },
+      {
+        name: 'work',
+        color:'red',
+        number:1,
+        description:'Manging Work tasks'
+      },
+      {
+        name: 'personal',
+        color:'blue',
+        number:2,
+        description:'Manging personal tasks'
+      },
+      {
+        name: 'work',
+        color:'red',
+        number:1,
+        description:'Manging Work tasks'
+      },
+      {
+        name: 'personal',
+        color:'blue',
+        number:2,
+        description:'Manging personal tasks'
+      },
+      {
+        name: 'work',
+        color:'red',
+        number:1,
+        description:'Manging Work tasks'
+      },
+      {
+        name: 'personal',
+        color:'blue',
+        number:2,
+        description:'Manging personal tasks'
+      },
+      {
+        name: 'work',
+        color:'red',
+        number:1,
+        description:'Manging Work tasks'
+      },
+      {
+        name: 'personal',
+        color:'blue',
+        number:2,
+        description:'Manging personal tasks'
+      },
+      {
+        name: 'work',
+        color:'red',
+        number:1,
+        description:'Manging Work tasks'
+      },
+      {
+        name: 'personal',
+        color:'blue',
+        number:2,
+        description:'Manging personal tasks'
       }
     ] 
   }

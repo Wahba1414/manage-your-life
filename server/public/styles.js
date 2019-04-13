@@ -48,7 +48,7 @@ module.exports = [[module.i, "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RSIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbiJdfQ== */", '', '']]
+module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n.main-color{\n    color: #2199e8 !important\n}\n.main-color-bg{\n    background-color: #2199e8 !important\n}\n.main-color-border{\n    border:2px solid #2199e8 !important\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RTtBQUM5RTtJQUNJO0FBQ0o7QUFFQTtJQUNJO0FBQ0o7QUFFQTtJQUNJO0FBQ0oiLCJmaWxlIjoic3JjL3N0eWxlcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG4ubWFpbi1jb2xvcntcbiAgICBjb2xvcjogIzIxOTllOCAhaW1wb3J0YW50XG59XG5cbi5tYWluLWNvbG9yLWJne1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMyMTk5ZTggIWltcG9ydGFudFxufVxuXG4ubWFpbi1jb2xvci1ib3JkZXJ7XG4gICAgYm9yZGVyOjJweCBzb2xpZCAjMjE5OWU4ICFpbXBvcnRhbnRcbn0iXX0= */", '', '']]
 
 /***/ }),
 
