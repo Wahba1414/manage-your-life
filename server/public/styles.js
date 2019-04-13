@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/zizo/web/github_projects/MEAN_Angular7_Template/client/src/styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! /home/zizo/web/github_projects/MEAN_Angular7_Template/node_modules/bootstrap/dist/css/bootstrap.min.css */"../node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /home/zizo/web/github_projects/Life_Management/client/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/zizo/web/github_projects/Life_Management/node_modules/bootstrap/dist/css/bootstrap.min.css */"../node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 
 /***/ })

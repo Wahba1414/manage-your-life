@@ -34,9 +34,9 @@ require('./express/config')(app);
 app.use(express.static(path.join(__dirname, 'public')));
  
 //Add generic route to handle any unhandled ones.
-app.get('/',(req, res) => {
+app.get('/*',(req, res) => {
   console.log("Receive new request..")
-  res.sendFile( path.resolve( __dirname + "/public" + "index.html" ) );
+  res.sendFile( path.resolve( __dirname + "/public/" + "index.html" ) );
 });
 
 //prmises to handle databases connections

@@ -1,7 +1,7 @@
 {
-  "name": "mean_project_template",
+  "name": "life_management",
   "version": "1.0.0",
-  "description": "template for MEAN projects",
+  "description": "app to manage my life",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
