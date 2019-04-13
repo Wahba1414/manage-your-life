@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 // importing interfaces.
 import Category from './category.interface';
 
+// Importing icons.
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-categories',
@@ -10,9 +13,15 @@ import Category from './category.interface';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-  constructor() { }
-  categories: Category[];
+  // Icons.
+  trash = faTrash;
+  edit = faEdit;
 
+  // declaration.
+  categories: Category[];
+  
+  constructor() { }
+  
   ngOnInit() {
     // initalizing categories.
     this. categories = [

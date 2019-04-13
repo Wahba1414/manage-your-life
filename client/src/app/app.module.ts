@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 // Icons.
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 // Importing app modules
@@ -24,6 +25,7 @@ import { CoreComponent } from './core/core.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -49,11 +49,14 @@
               <input type="checkbox" class="" id="">
             </th>
             <th scope="col"  width="10%">#</th>
-            <th scope="col"  width="20%">Name</th>
-            <th scope="col"  width="20%">Color</th>
+            <th scope="col"  width="15%">Name</th>
+            <th scope="col"  width="15%">Color</th>
             <th scope="col"  width="40%">Description</th>
-            <th  width="8%">
-                <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
+            <th  width="15%">
+              <button style="background-color:transparent;border:none">
+                <fa-icon [icon]="trash" style="color:red"></fa-icon>
+              </button>
+              
             </th>
           </tr>
         </thead>
@@ -63,11 +66,17 @@
               <input type="checkbox" class="" id="">
             </th>
             <th width="10%" scope="row">{{category.number}}</th>
-            <td width="20%">{{category.name}}</td>
-            <td width="20%">{{category.color}}</td>
+            <td width="15%">{{category.name}}</td>
+            <td width="15%">{{category.color}}</td>
             <td width="40%">{{category.description}}</td>
-            <td width="8%">
-               actions 
+            <td width="15%">
+              <button style="background-color:transparent;border:none">
+                <fa-icon [icon]="trash" style="color:red"></fa-icon>
+              </button>
+              
+              <button style="background-color:transparent;border:none">
+                  <fa-icon [icon]="edit" style="color:blue"></fa-icon>
+                </button>
             </td>
           </tr>
         </tbody>

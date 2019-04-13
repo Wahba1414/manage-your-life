@@ -135,16 +135,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tasks/tasks.component */ "./src/app/tasks/tasks.component.ts");
-/* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
-/* harmony import */ var _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./statistics/statistics.component */ "./src/app/statistics/statistics.component.ts");
-/* harmony import */ var _core_core_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./core/core.component */ "./src/app/core/core.component.ts");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tasks/tasks.component */ "./src/app/tasks/tasks.component.ts");
+/* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
+/* harmony import */ var _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./statistics/statistics.component */ "./src/app/statistics/statistics.component.ts");
+/* harmony import */ var _core_core_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./core/core.component */ "./src/app/core/core.component.ts");
 
 
 
 
 // Icons.
+
 // Importing app modules
 
 
@@ -157,18 +159,19 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_5__["TasksComponent"],
-                _categories_categories_component__WEBPACK_IMPORTED_MODULE_6__["CategoriesComponent"],
-                _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_7__["StatisticsComponent"],
-                _core_core_component__WEBPACK_IMPORTED_MODULE_8__["CoreComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_6__["TasksComponent"],
+                _categories_categories_component__WEBPACK_IMPORTED_MODULE_7__["CategoriesComponent"],
+                _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_8__["StatisticsComponent"],
+                _core_core_component__WEBPACK_IMPORTED_MODULE_9__["CoreComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -196,7 +199,7 @@ module.exports = ".custom-form{\n    /* border: 2px solid #17a2b8; */\n    /* pa
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Adding new category -->\n<div class=\"mt-3 mb-4\">\n  <div class=\"row mb-3\">\n    <div class=\"col-10 col-md-10\">\n    </div>\n    <div class=\"col-2 col-md-2\">\n        <button class=\"btn btn btn-info\" type=\"button\">Add New Category</button>\n    </div>\n  </div>\n\n  <!-- Adding form -->\n  <div *ngIf=\"true\" class=\"row\">\n    <div class=\"offset-md-2 col-md-8 custom-form\">\n      <form>\n        <div class=\"form-row\">\n          <div class=\"form-group col-md-5\">\n            <label for=\"categoryName\">Name</label>\n            <input type=\"text\" class=\"form-control\" id=\"categoryName\" placeholder=\"Name\">\n          </div>\n          <div class=\"form-group offset-md-2 col-md-5\">\n            <label for=\"categoryColor\">Color</label>\n            <input type=\"color\" class=\"form-control\" id=\"categoryColor\" placeholder=\"Color\">\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"categoryDescription\">Description</label>\n          <textarea class=\"form-control\" id=\"categoryDescription\" rows=\"3\"></textarea>\n        </div>\n\n        <div class=\"form-row\">\n            <div class=\"form-group offset-md-8 col-md-4 d-flex flex-row-reverse\">\n                <button type=\"button\" class=\"btn btn-info ml-2\">Save</button>\n                <button type=\"button\" class=\"btn btn-danger\">Cancel</button>\n            </div>\n        </div>\n        \n      </form>\n    </div>  \n  </div>\n</div>\n\n<!-- Table of Categories -->\n<div>\n    <table class=\"table table-hover\">\n        <thead>\n          <tr>\n            <th scope=\"row\"> \n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th scope=\"col\"  width=\"10%\">#</th>\n            <th scope=\"col\"  width=\"20%\">Name</th>\n            <th scope=\"col\"  width=\"20%\">Color</th>\n            <th scope=\"col\"  width=\"40%\">Description</th>\n            <th  width=\"8%\">\n                <!-- <fa-icon [icon]=\"faCoffee\"></fa-icon> -->\n            </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let category of categories; let index = index;\">\n            <th width=\"10%\" scope=\"row\"> \n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th width=\"10%\" scope=\"row\">{{category.number}}</th>\n            <td width=\"20%\">{{category.name}}</td>\n            <td width=\"20%\">{{category.color}}</td>\n            <td width=\"40%\">{{category.description}}</td>\n            <td width=\"8%\">\n               actions \n            </td>\n          </tr>\n        </tbody>\n      </table>\n</div>"
+module.exports = "<!-- Adding new category -->\n<div class=\"mt-3 mb-4\">\n  <div class=\"row mb-3\">\n    <div class=\"col-10 col-md-10\">\n    </div>\n    <div class=\"col-2 col-md-2\">\n        <button class=\"btn btn btn-info\" type=\"button\">Add New Category</button>\n    </div>\n  </div>\n\n  <!-- Adding form -->\n  <div *ngIf=\"true\" class=\"row\">\n    <div class=\"offset-md-2 col-md-8 custom-form\">\n      <form>\n        <div class=\"form-row\">\n          <div class=\"form-group col-md-5\">\n            <label for=\"categoryName\">Name</label>\n            <input type=\"text\" class=\"form-control\" id=\"categoryName\" placeholder=\"Name\">\n          </div>\n          <div class=\"form-group offset-md-2 col-md-5\">\n            <label for=\"categoryColor\">Color</label>\n            <input type=\"color\" class=\"form-control\" id=\"categoryColor\" placeholder=\"Color\">\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"categoryDescription\">Description</label>\n          <textarea class=\"form-control\" id=\"categoryDescription\" rows=\"3\"></textarea>\n        </div>\n\n        <div class=\"form-row\">\n            <div class=\"form-group offset-md-8 col-md-4 d-flex flex-row-reverse\">\n                <button type=\"button\" class=\"btn btn-info ml-2\">Save</button>\n                <button type=\"button\" class=\"btn btn-danger\">Cancel</button>\n            </div>\n        </div>\n        \n      </form>\n    </div>  \n  </div>\n</div>\n\n<!-- Table of Categories -->\n<div>\n    <table class=\"table table-hover\">\n        <thead>\n          <tr>\n            <th scope=\"row\"> \n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th scope=\"col\"  width=\"10%\">#</th>\n            <th scope=\"col\"  width=\"15%\">Name</th>\n            <th scope=\"col\"  width=\"15%\">Color</th>\n            <th scope=\"col\"  width=\"40%\">Description</th>\n            <th  width=\"15%\">\n              <button style=\"background-color:transparent;border:none\">\n                <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n              </button>\n              \n            </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let category of categories; let index = index;\">\n            <th width=\"10%\" scope=\"row\"> \n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th width=\"10%\" scope=\"row\">{{category.number}}</th>\n            <td width=\"15%\">{{category.name}}</td>\n            <td width=\"15%\">{{category.color}}</td>\n            <td width=\"40%\">{{category.description}}</td>\n            <td width=\"15%\">\n              <button style=\"background-color:transparent;border:none\">\n                <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n              </button>\n              \n              <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"edit\" style=\"color:blue\"></fa-icon>\n                </button>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n</div>"
 
 /***/ }),
 
@@ -212,10 +215,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoriesComponent", function() { return CategoriesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 
+
+// Importing icons.
 
 var CategoriesComponent = /** @class */ (function () {
     function CategoriesComponent() {
+        // Icons.
+        this.trash = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTrash"];
+        this.edit = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faEdit"];
     }
     CategoriesComponent.prototype.ngOnInit = function () {
         // initalizing categories.
