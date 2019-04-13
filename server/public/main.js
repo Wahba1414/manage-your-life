@@ -183,7 +183,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NhdGVnb3JpZXMvY2F0ZWdvcmllcy5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".custom-form{\n    /* border: 2px solid #17a2b8; */\n    /* padding: 20px; */\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2F0ZWdvcmllcy9jYXRlZ29yaWVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwrQkFBK0I7SUFDL0IsbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY2F0ZWdvcmllcy9jYXRlZ29yaWVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VzdG9tLWZvcm17XG4gICAgLyogYm9yZGVyOiAycHggc29saWQgIzE3YTJiODsgKi9cbiAgICAvKiBwYWRkaW5nOiAyMHB4OyAqL1xufSJdfQ== */"
 
 /***/ }),
 
@@ -194,7 +194,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  categories works!\n</p>\n"
+module.exports = "<!-- Adding new category -->\n<div class=\"mt-3 mb-4\">\n  <div class=\"row mb-3\">\n    <div class=\"col-10 col-md-10\">\n    </div>\n    <div class=\"col-2 col-md-2\">\n        <button class=\"btn btn btn-info\" type=\"button\">Add New Category</button>\n    </div>\n  </div>\n\n  <!-- Adding form -->\n  <div *ngIf=\"true\" class=\"row\">\n    <div class=\"offset-md-2 col-md-8 custom-form\">\n      <form>\n        <div class=\"form-row\">\n          <div class=\"form-group col-md-5\">\n            <label for=\"categoryName\">Name</label>\n            <input type=\"text\" class=\"form-control\" id=\"categoryName\" placeholder=\"Name\">\n          </div>\n          <div class=\"form-group offset-md-2 col-md-5\">\n            <label for=\"categoryColor\">Color</label>\n            <input type=\"color\" class=\"form-control\" id=\"categoryColor\" placeholder=\"Color\">\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"categoryDescription\">Description</label>\n          <textarea class=\"form-control\" id=\"categoryDescription\" rows=\"3\"></textarea>\n        </div>\n\n        <div class=\"form-row\">\n            <div class=\"form-group offset-md-8 col-md-4 d-flex flex-row-reverse\">\n                <button type=\"button\" class=\"btn btn-info ml-2\">Save</button>\n                <button type=\"button\" class=\"btn btn-danger\">Cancel</button>\n            </div>\n        </div>\n        \n      </form>\n    </div>  \n  </div>\n</div>\n\n<!-- Table of Categories -->\n<div>\n    <table class=\"table table-hover\">\n        <thead>\n          <tr>\n            <th scope=\"row\"> \n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th scope=\"col\"  width=\"10%\">#</th>\n            <th scope=\"col\"  width=\"20%\">Name</th>\n            <th scope=\"col\"  width=\"20%\">Color</th>\n            <th scope=\"col\"  width=\"40%\">Description</th>\n            <th  width=\"8%\">\n              actions\n            </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let category of categories; let index = index;\">\n            <th width=\"10%\" scope=\"row\"> \n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th width=\"10%\" scope=\"row\">{{category.number}}</th>\n            <td width=\"20%\">{{category.name}}</td>\n            <td width=\"20%\">{{category.color}}</td>\n            <td width=\"40%\">{{category.description}}</td>\n            <td width=\"8%\">\n               actions \n            </td>\n          </tr>\n        </tbody>\n      </table>\n</div>"
 
 /***/ }),
 
@@ -216,6 +216,21 @@ var CategoriesComponent = /** @class */ (function () {
     function CategoriesComponent() {
     }
     CategoriesComponent.prototype.ngOnInit = function () {
+        // initalizing categories.
+        this.categories = [
+            {
+                name: 'work',
+                color: 'red',
+                number: 1,
+                description: 'Manging Work tasks'
+            },
+            {
+                name: 'personal',
+                color: 'blue',
+                number: 2,
+                description: 'Manging personal tasks'
+            }
+        ];
     };
     CategoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -250,7 +265,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" style=\"color:aliceblue\">LOGO</a>\n    \n    <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"tasks\" routerLinkActive=\"active\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"categories\" routerLinkActive=\"active\">Categories</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"statistics\" routerLinkActive=\"active\">Statistics</a>\n        </li>\n      </ul>\n      \n      <form class=\"form-inline\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<div>\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" style=\"color:aliceblue\">LOGO</a>\n    \n    <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"tasks\" routerLinkActive=\"active\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"categories\" routerLinkActive=\"active\">Categories</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"statistics\" routerLinkActive=\"active\">Statistics</a>\n        </li>\n      </ul>\n      \n      <form class=\"form-inline\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-info my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 

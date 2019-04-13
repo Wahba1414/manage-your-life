@@ -9,7 +9,8 @@ module.exports = function (connection,options) {
   var schema = new Schema({
     name: String,
     description: String,
-    color: String
+    color: String,
+    number: Number,
   });
 
   //Add the needed plugins here.
