@@ -49,7 +49,9 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     { path: 'tasks', component: _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_3__["TasksComponent"] },
     { path: 'categories', component: _categories_categories_component__WEBPACK_IMPORTED_MODULE_4__["CategoriesComponent"] },
-    { path: 'statistics', component: _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_5__["StatisticsComponent"] }
+    { path: 'statistics', component: _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_5__["StatisticsComponent"] },
+    // Defualt wildcard route.
+    { path: '**', redirectTo: '/tasks', pathMatch: 'full' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

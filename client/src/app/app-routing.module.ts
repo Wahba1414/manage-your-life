@@ -10,7 +10,10 @@ import { StatisticsComponent } from './statistics/statistics.component';
 const routes: Routes = [
   { path: 'tasks', component: TasksComponent },
   { path: 'categories' , component: CategoriesComponent},
-  { path: 'statistics' , component:StatisticsComponent}
+  { path: 'statistics' , component:StatisticsComponent},
+
+  // Defualt wildcard route.
+  { path: '**', redirectTo: '/tasks', pathMatch: 'full' }
 ];
 
 @NgModule({
