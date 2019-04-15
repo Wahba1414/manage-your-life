@@ -9,7 +9,7 @@
   </div>
 
   <!-- Adding form -->
-  <div *ngIf="true" class="row">
+  <div *ngIf="false" class="row">
     <div class="offset-md-4 col-md-4 custom-form">
       <form>
         <div class="form-row d-flex justify-content-between">
@@ -41,7 +41,7 @@
 </div>
 
 <!-- Table of Categories -->
-<div>
+<div *ngIf='false'>
     <table class="table table-hover">
         <thead>
           <tr>
@@ -98,4 +98,17 @@
       <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
     
+</div>
+
+
+
+<!-- Empty category table -->
+<div class="row mt-5">
+  <div class="column offset-md-3 col-md-6">
+    <div class="card" style="border-color:red">
+      <div class="card-body d-flex justify-content-around">
+        <p class="card-text" style="color:red">There are no categories, let's add the first one.</p>
+      </div>
+    </div>
+  </div>
 </div>
