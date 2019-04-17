@@ -79,7 +79,10 @@
             </th>
             <th width="10%" scope="row">{{category.number}}</th>
             <td width="15%">{{category.name}}</td>
-            <td width="15%" [ngStyle]="{'color':category.color}">{{category.color}}</td>
+            <td width="15%">
+              <div [ngStyle]="{'background-color':category.color, width:'20px', height:'20px','margin-left':'10px'}">
+              </div>
+            </td>
             <td width="40%">{{category.description}}</td>
             <td width="15%">
               <div class="d-flex flex-row-reverse mr-3">
