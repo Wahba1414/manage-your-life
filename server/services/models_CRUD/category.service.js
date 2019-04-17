@@ -55,6 +55,24 @@ service.getCategories = function(queryData){
 
 //Update category.
 
-// Delete category.
+// Remove categories.
+// Depend on number field for simplicity.
+service.removeCategoriesByIDs = function(queryData){
+    console.log("Inside service.removeCategoriesByIDs function");
+    
+    return Q.promise(function (resolve, reject) {
+        // preparing query object.
+        
+        // Fetching ..
+        dbs.mean_template.connection.Category.deleteMany({number:{$in:queryData}}).then(function(){
+            resolve({
+                success: true
+            })
+        },function(err){
+            console.log("error happened inside service.removeCategoriesByIDs function: " , err);
+            reject({success:false , msg:"error happened during fetching all categories"});
+        });
+    });
+}
 
 module.exports = service;

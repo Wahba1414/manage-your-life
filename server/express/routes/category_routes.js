@@ -16,4 +16,6 @@ router.post('/createCategory', controller.createCategory);
 
 router.get('/getCategories', controller.getCategories);
 
+router.post('/removeCategories', controller.removeCategories);
+
 

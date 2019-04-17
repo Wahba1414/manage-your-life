@@ -48,8 +48,6 @@ export class CategoriesComponent implements OnInit {
       number: 0 //Will ignored by the server.
     };
 
-    console.log('newCategory: ' , newCategory);
-
     this.http.post('category/createCategory',newCategory).subscribe((data:any) => {
       // Reset form.
       this.newCategoryForm.reset();
@@ -66,6 +64,17 @@ export class CategoriesComponent implements OnInit {
       this.categories = data.categories;
     })
   }
+
+  // Delete.
+  deleteCategory(category:any){
+    this.http.post('category/removeCategories',[category.number]).subscribe((data:any) => {
+      // Refresh.
+      this.getCategories();
+    })
+  }
+
+  // Update.
+
 
   // Controls.
   showNewCategoryForm:Boolean = false;

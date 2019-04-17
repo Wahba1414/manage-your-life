@@ -21,7 +21,7 @@ controller.createCategory = function(req,res){
     });
 }
 
-// Create read categories.
+// Read categories.
 controller.getCategories = function(req,res){
     console.log("Inside controller.getCategories function");
 
@@ -29,6 +29,21 @@ controller.getCategories = function(req,res){
     var queryData = req.body;
     // Calling service.
     categoryService.getCategories(queryData).then(function(result){
+        res.send(result);
+    },function(error){
+        res.status(500);
+        res.send(error);
+    });
+}
+
+// delete categories.
+controller.removeCategories = function(req,res){
+    console.log("Inside controller.removeCategories function");
+
+    // preparing data.
+    var queryData = req.body;
+    // Calling service.
+    categoryService.removeCategoriesByIDs(queryData).then(function(result){
         res.send(result);
     },function(error){
         res.status(500);
