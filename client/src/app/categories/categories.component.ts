@@ -13,6 +13,9 @@ import Category from './category.interface';
 // Importing icons.
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 
+// Angular notifier.
+import { NotifierService } from 'angular-notifier';
+
 
 @Component({
   selector: 'app-categories',
@@ -34,23 +37,32 @@ export class CategoriesComponent implements OnInit {
   newCategoryForm = this.fb.group({
     name: ['',Validators.required],
     description: ['',[Validators.required] ],
-    color: ['black'],
+    color: ['#FF8899'],
   });
 
   // submit.
   onSubmit(){
     console.log('Inside onSubmit function');
+
+    console.log('this.newCategoryForm: ' , this.newCategoryForm);
     // preparing the new category data.
     var newCategory:Category = {
       name: this.newCategoryForm.controls['name'].value.trim(),
       description: this.newCategoryForm.controls['description'].value.trim(),
-      color: this.newCategoryForm.controls['color'].value.trim(),
+      color: this.newCategoryForm.controls['color'].value,
       number: 0 //Will ignored by the server.
     };
 
     this.http.post('category/createCategory',newCategory).subscribe((data:any) => {
-      // Reset form.
-      this.newCategoryForm.reset();
+      // notifier.
+      this.notifierService.notify('success' , 'New Category is successfully added');
+      // Reset form with initial values.
+      this.newCategoryForm.setValue({
+          name: '',
+          description: '',
+          color: '#FF8899'
+      });
+      this.newCategoryForm.reset(this.newCategoryForm.value);
       // Refresh.
       this.getCategories();
     })
@@ -87,7 +99,7 @@ export class CategoriesComponent implements OnInit {
     this.showNewCategoryForm = false;
   }
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private notifierService: NotifierService) {
 
   }
 

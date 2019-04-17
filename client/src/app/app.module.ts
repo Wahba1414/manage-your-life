@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// Angular notifier.
+import { NotifierModule } from 'angular-notifier';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -36,7 +39,8 @@ import { CoreComponent } from './core/core.component';
     NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NotifierModule
   ],
   providers: [],
   bootstrap: [AppComponent]

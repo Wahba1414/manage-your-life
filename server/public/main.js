@@ -140,18 +140,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
-/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./tasks/tasks.component */ "./src/app/tasks/tasks.component.ts");
-/* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
-/* harmony import */ var _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./statistics/statistics.component */ "./src/app/statistics/statistics.component.ts");
-/* harmony import */ var _core_core_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./core/core.component */ "./src/app/core/core.component.ts");
+/* harmony import */ var angular_notifier__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-notifier */ "./node_modules/angular-notifier/esm5/angular-notifier.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./tasks/tasks.component */ "./src/app/tasks/tasks.component.ts");
+/* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
+/* harmony import */ var _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./statistics/statistics.component */ "./src/app/statistics/statistics.component.ts");
+/* harmony import */ var _core_core_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./core/core.component */ "./src/app/core/core.component.ts");
 
 
 
 
+
+// Angular notifier.
 
 
 // Icons.
@@ -170,23 +173,24 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
-                _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_9__["TasksComponent"],
-                _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__["CategoriesComponent"],
-                _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_11__["StatisticsComponent"],
-                _core_core_component__WEBPACK_IMPORTED_MODULE_12__["CoreComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
+                _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_10__["TasksComponent"],
+                _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__["CategoriesComponent"],
+                _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_12__["StatisticsComponent"],
+                _core_core_component__WEBPACK_IMPORTED_MODULE_13__["CoreComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
-                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeModule"],
-                ngx_pagination__WEBPACK_IMPORTED_MODULE_7__["NgxPaginationModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__["FontAwesomeModule"],
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_8__["NgxPaginationModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                angular_notifier__WEBPACK_IMPORTED_MODULE_5__["NotifierModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -233,6 +237,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var angular_notifier__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-notifier */ "./node_modules/angular-notifier/esm5/angular-notifier.js");
 
 
 // Form.
@@ -241,10 +246,13 @@ __webpack_require__.r(__webpack_exports__);
 
 // Importing icons.
 
+// Angular notifier.
+
 var CategoriesComponent = /** @class */ (function () {
-    function CategoriesComponent(fb, http) {
+    function CategoriesComponent(fb, http, notifierService) {
         this.fb = fb;
         this.http = http;
+        this.notifierService = notifierService;
         // Icons.
         this.trash = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faTrash"];
         this.edit = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faEdit"];
@@ -256,7 +264,7 @@ var CategoriesComponent = /** @class */ (function () {
         this.newCategoryForm = this.fb.group({
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
-            color: ['black'],
+            color: ['#FF8899'],
         });
         // Update.
         // Controls.
@@ -266,16 +274,24 @@ var CategoriesComponent = /** @class */ (function () {
     CategoriesComponent.prototype.onSubmit = function () {
         var _this = this;
         console.log('Inside onSubmit function');
+        console.log('this.newCategoryForm: ', this.newCategoryForm);
         // preparing the new category data.
         var newCategory = {
             name: this.newCategoryForm.controls['name'].value.trim(),
             description: this.newCategoryForm.controls['description'].value.trim(),
-            color: this.newCategoryForm.controls['color'].value.trim(),
+            color: this.newCategoryForm.controls['color'].value,
             number: 0 //Will ignored by the server.
         };
         this.http.post('category/createCategory', newCategory).subscribe(function (data) {
-            // Reset form.
-            _this.newCategoryForm.reset();
+            // notifier.
+            _this.notifierService.notify('success', 'New Category is successfully added');
+            // Reset form with initial values.
+            _this.newCategoryForm.setValue({
+                name: '',
+                description: '',
+                color: '#FF8899'
+            });
+            _this.newCategoryForm.reset(_this.newCategoryForm.value);
             // Refresh.
             _this.getCategories();
         });
@@ -312,7 +328,7 @@ var CategoriesComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./categories.component.html */ "./src/app/categories/categories.component.html"),
             styles: [__webpack_require__(/*! ./categories.component.css */ "./src/app/categories/categories.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], angular_notifier__WEBPACK_IMPORTED_MODULE_5__["NotifierService"]])
     ], CategoriesComponent);
     return CategoriesComponent;
 }());
@@ -339,7 +355,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" style=\"color:aliceblue\">LOGO</a>\n    \n    <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"tasks\" routerLinkActive=\"active\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"categories\" routerLinkActive=\"active\">Categories</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"statistics\" routerLinkActive=\"active\">Statistics</a>\n        </li>\n      </ul>\n      \n      <form class=\"form-inline\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-primary my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<notifier-container></notifier-container>\n<div>\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" style=\"color:aliceblue\">LOGO</a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"tasks\" routerLinkActive=\"active\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"categories\" routerLinkActive=\"active\">Categories</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"statistics\" routerLinkActive=\"active\">Statistics</a>\n        </li>\n      </ul>\n\n      <form class=\"form-inline\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-primary my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 

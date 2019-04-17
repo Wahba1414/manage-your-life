@@ -41,6 +41,17 @@ module.exports = [[module.i, "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com
 
 /***/ }),
 
+/***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/angular-notifier/styles.css":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./node_modules/angular-notifier/styles.css ***!
+  \*******************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = [[module.i, ".notifier__container * {\n  box-sizing: border-box;\n}\n\n.notifier__container-list {\n  margin-top: 0;\n  margin-bottom: 0;\n  padding-left: 0;\n  list-style-type: none;\n}\n\n.notifier__notification {\n  display: block;\n  position: fixed;\n  visibility: hidden;\n  z-index: 10000;\n  will-change: transform;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden;\n}\n\n.notifier__notification--material {\n  border-radius: 3px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);\n  cursor: default;\n  padding-top: 11px;\n  padding-right: 26px;\n  padding-bottom: 10px;\n  padding-left: 26px;\n}\n\n.notifier__notification--material .notifier__notification-message {\n  display: inline-block;\n  margin-top: 0;\n  margin-bottom: 0;\n  vertical-align: top;\n  line-height: 32px;\n  font-size: 15px;\n}\n\n.notifier__notification--material .notifier__notification-button {\n  display: inline-block;\n  transition: opacity .2s ease;\n  opacity: .5;\n  margin-right: -10px;\n  margin-left: 10px;\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 6px;\n  width: 32px;\n  height: 32px;\n  vertical-align: top;\n}\n\n.notifier__notification--material .notifier__notification-button:hover, .notifier__notification--material .notifier__notification-button:focus {\n  opacity: 1;\n}\n\n.notifier__notification--material .notifier__notification-button:active {\n  -webkit-transform: scale(0.82);\n          transform: scale(0.82);\n  opacity: 1;\n}\n\n.notifier__notification--default {\n  background-color: #444;\n  color: #FFF;\n}\n\n.notifier__notification--default .notifier__notification-button-icon {\n  fill: #FFF;\n}\n\n.notifier__notification--error {\n  background-color: #D9534F;\n  color: #FFF;\n}\n\n.notifier__notification--error .notifier__notification-button-icon {\n  fill: #FFF;\n}\n\n.notifier__notification--info {\n  background-color: #5BC0DE;\n  color: #FFF;\n}\n\n.notifier__notification--info .notifier__notification-button-icon {\n  fill: #FFF;\n}\n\n.notifier__notification--success {\n  background-color: #5CB85C;\n  color: #FFF;\n}\n\n.notifier__notification--success .notifier__notification-button-icon {\n  fill: #FFF;\n}\n\n.notifier__notification--warning {\n  background-color: #F0AD4E;\n  color: #FFF;\n}\n\n.notifier__notification--warning .notifier__notification-button-icon {\n  fill: #FFF;\n}\n\n/*# sourceMappingURL=styles.css.map */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9zcmMvbGliL3N0eWxlcy9jb3JlLnNjc3MiLCJub2RlX21vZHVsZXMvYW5ndWxhci1ub3RpZmllci9zdHlsZXMuY3NzIiwibm9kZV9tb2R1bGVzL3NyYy9saWIvc3R5bGVzL3RoZW1lcy90aGVtZS1tYXRlcmlhbC5zY3NzIiwibm9kZV9tb2R1bGVzL3NyYy9saWIvc3R5bGVzL3R5cGVzL3R5cGUtZGVmYXVsdC5zY3NzIiwibm9kZV9tb2R1bGVzL3NyYy9saWIvc3R5bGVzL3R5cGVzL3R5cGUtZXJyb3Iuc2NzcyIsIm5vZGVfbW9kdWxlcy9zcmMvbGliL3N0eWxlcy90eXBlcy90eXBlLWluZm8uc2NzcyIsIm5vZGVfbW9kdWxlcy9zcmMvbGliL3N0eWxlcy90eXBlcy90eXBlLXN1Y2Nlc3Muc2NzcyIsIm5vZGVfbW9kdWxlcy9zcmMvbGliL3N0eWxlcy90eXBlcy90eXBlLXdhcm5pbmcuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNRTtFQUdDLHNCQUFzQjtBQ1B6Qjs7QURVRTtFQUVFLGFBQU07RUFDTixnQkFBUztFQUdULGVBQU87RUFFUixxQkFBcUI7QUNYeEI7O0FEZ0JDO0VBQ0MsY0FBYztFQUNkLGVBQWU7RUFDZixrQkFBa0I7RUFDbEIsY0FBYztFQUdkLHNCQUFzQjtFQUl0QixtQ0FBMkI7VUFBM0IsMkJBQTJCO0FDbEI3Qjs7QUNWQTtFQUNDLGtCQUFrQjtFQUNsQix3Q0FKd0M7RUFLeEMsZUFBZTtFQUVkLGlCQUFTO0VBQ1QsbUJBQVc7RUFDWCxvQkFBWTtFQUNaLGtCQUFVO0FEWVo7O0FDcEJBO0VBY0cscUJBQXFCO0VBRXBCLGFBQU07RUFDTixnQkFBUztFQUVWLG1CQUFtQjtFQUNuQixpQkFBaUI7RUFDakIsZUFBZTtBRFFsQjs7QUM3QkE7RUF5QkcscUJBQXFCO0VBQ3JCLDRCQUE0QjtFQUM1QixXQUFXO0VBRVYsbUJBQVk7RUFDWixpQkFBVTtFQUVYLGFBQWE7RUFDYixZQUFZO0VBQ1osZ0JBQWdCO0VBQ2hCLGVBQWU7RUFDZixZQUFZO0VBQ1osV0FBVztFQUNYLFlBQVk7RUFDWixtQkFBbUI7QURNdEI7O0FDN0NBO0VBMkNJLFVBQVU7QURNZDs7QUNqREE7RUErQ0ksOEJBQXFCO1VBQXJCLHNCQUFxQjtFQUNyQixVQUFVO0FETWQ7O0FFeERBO0VBQ0Msc0JBTHVDO0VBTXZDLFdBTGlDO0FGZ0VsQzs7QUU3REE7RUFLRSxVQVBnQztBRm1FbEM7O0FHakVBO0VBQ0MseUJBTHdDO0VBTXhDLFdBTCtCO0FIeUVoQzs7QUd0RUE7RUFLRSxVQVA4QjtBSDRFaEM7O0FJMUVBO0VBQ0MseUJBTHVDO0VBTXZDLFdBTDhCO0FKa0YvQjs7QUkvRUE7RUFLRSxVQVA2QjtBSnFGL0I7O0FLbkZBO0VBQ0MseUJBTDBDO0VBTTFDLFdBTGlDO0FMMkZsQzs7QUt4RkE7RUFLRSxVQVBnQztBTDhGbEM7O0FNNUZBO0VBQ0MseUJBTDBDO0VBTTFDLFdBTGlDO0FOb0dsQzs7QU1qR0E7RUFLRSxVQVBnQztBTnVHbEM7O0FBRUEscUNBQXFDIiwiZmlsZSI6Im5vZGVfbW9kdWxlcy9hbmd1bGFyLW5vdGlmaWVyL3N0eWxlcy5jc3MifQ== */", '', '']]
+
+/***/ }),
+
 /***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/styles.css":
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./src/styles.css ***!
@@ -49,6 +60,36 @@ module.exports = [[module.i, "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com
 /***/ (function(module, exports) {
 
 module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n.main-color{\n    color: #2199e8 !important\n}\n.main-color-bg{\n    background-color: #2199e8 !important\n}\n.main-color-border{\n    border:2px solid #2199e8 !important\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RTtBQUM5RTtJQUNJO0FBQ0o7QUFFQTtJQUNJO0FBQ0o7QUFFQTtJQUNJO0FBQ0oiLCJmaWxlIjoic3JjL3N0eWxlcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG4ubWFpbi1jb2xvcntcbiAgICBjb2xvcjogIzIxOTllOCAhaW1wb3J0YW50XG59XG5cbi5tYWluLWNvbG9yLWJne1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMyMTk5ZTggIWltcG9ydGFudFxufVxuXG4ubWFpbi1jb2xvci1ib3JkZXJ7XG4gICAgYm9yZGVyOjJweCBzb2xpZCAjMjE5OWU4ICFpbXBvcnRhbnRcbn0iXX0= */", '', '']]
+
+/***/ }),
+
+/***/ "./node_modules/angular-notifier/styles.css":
+/*!**************************************************!*\
+  !*** ./node_modules/angular-notifier/styles.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../postcss-loader/src??embedded!./styles.css */ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/angular-notifier/styles.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -592,14 +633,15 @@ if(false) {}
 /***/ }),
 
 /***/ 3:
-/*!***********************************************************************************!*\
-  !*** multi ./src/styles.css ../node_modules/bootstrap/dist/css/bootstrap.min.css ***!
-  \***********************************************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** multi ./src/styles.css ../node_modules/bootstrap/dist/css/bootstrap.min.css ./node_modules/angular-notifier/styles.css ***!
+  \******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/zizo/web/github_projects/Life_Management/client/src/styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! /home/zizo/web/github_projects/Life_Management/node_modules/bootstrap/dist/css/bootstrap.min.css */"../node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /home/zizo/web/github_projects/Life_Management/node_modules/bootstrap/dist/css/bootstrap.min.css */"../node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! /home/zizo/web/github_projects/Life_Management/client/node_modules/angular-notifier/styles.css */"./node_modules/angular-notifier/styles.css");
 
 
 /***/ })
