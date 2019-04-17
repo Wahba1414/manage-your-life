@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 // Importing app components
 import { TasksComponent } from './tasks/tasks.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { StatisticsComponent } from './statistics/statistics.component'; 
+import { StatisticsComponent } from './statistics/statistics.component';
 
 const routes: Routes = [
   { path: 'tasks', component: TasksComponent },
@@ -17,7 +19,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes) ,
+    // FormsModule ,
+    // ReactiveFormsModule
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

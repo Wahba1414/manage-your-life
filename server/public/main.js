@@ -58,7 +58,9 @@ var AppRoutingModule = /** @class */ (function () {
     }
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            imports: [
+                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes),
+            ],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
         })
     ], AppRoutingModule);
@@ -136,14 +138,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
-/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./tasks/tasks.component */ "./src/app/tasks/tasks.component.ts");
-/* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
-/* harmony import */ var _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./statistics/statistics.component */ "./src/app/statistics/statistics.component.ts");
-/* harmony import */ var _core_core_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./core/core.component */ "./src/app/core/core.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./tasks/tasks.component */ "./src/app/tasks/tasks.component.ts");
+/* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
+/* harmony import */ var _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./statistics/statistics.component */ "./src/app/statistics/statistics.component.ts");
+/* harmony import */ var _core_core_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./core/core.component */ "./src/app/core/core.component.ts");
+
+
 
 
 
@@ -164,20 +170,23 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-                _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_7__["TasksComponent"],
-                _categories_categories_component__WEBPACK_IMPORTED_MODULE_8__["CategoriesComponent"],
-                _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_9__["StatisticsComponent"],
-                _core_core_component__WEBPACK_IMPORTED_MODULE_10__["CoreComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
+                _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_9__["TasksComponent"],
+                _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__["CategoriesComponent"],
+                _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_11__["StatisticsComponent"],
+                _core_core_component__WEBPACK_IMPORTED_MODULE_12__["CoreComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeModule"],
-                ngx_pagination__WEBPACK_IMPORTED_MODULE_5__["NgxPaginationModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeModule"],
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_7__["NgxPaginationModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -194,7 +203,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".custom-select{\n    width:60px;\n    height: 35px;\n}\n\n.custom-label{\n    font-size: 15px;\n    font-weight: bold\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2F0ZWdvcmllcy9jYXRlZ29yaWVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0lBQ1YsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGVBQWU7SUFDZjtBQUNKIiwiZmlsZSI6InNyYy9hcHAvY2F0ZWdvcmllcy9jYXRlZ29yaWVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VzdG9tLXNlbGVjdHtcbiAgICB3aWR0aDo2MHB4O1xuICAgIGhlaWdodDogMzVweDtcbn1cblxuLmN1c3RvbS1sYWJlbHtcbiAgICBmb250LXNpemU6IDE1cHg7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGRcbn0iXX0= */"
+module.exports = ".custom-select{\n    width:60px;\n    height: 35px;\n}\n\n.custom-label{\n    font-size: 15px;\n    font-weight: bold\n}\n\n.app-invalid{\n  border-color: red;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2F0ZWdvcmllcy9jYXRlZ29yaWVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0lBQ1YsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGVBQWU7SUFDZjtBQUNKOztBQUVBO0VBQ0UsaUJBQWlCO0FBQ25CIiwiZmlsZSI6InNyYy9hcHAvY2F0ZWdvcmllcy9jYXRlZ29yaWVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VzdG9tLXNlbGVjdHtcbiAgICB3aWR0aDo2MHB4O1xuICAgIGhlaWdodDogMzVweDtcbn1cblxuLmN1c3RvbS1sYWJlbHtcbiAgICBmb250LXNpemU6IDE1cHg7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGRcbn1cblxuLmFwcC1pbnZhbGlke1xuICBib3JkZXItY29sb3I6IHJlZDtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -205,7 +214,7 @@ module.exports = ".custom-select{\n    width:60px;\n    height: 35px;\n}\n\n.cus
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Adding new category -->\n<div class=\"mt-3 mb-4\" style=\"overflow-x: hidden;\">\n  <div class=\"row mb-3\">\n    <div class=\"col-10 col-md-10\">\n    </div>\n    <div class=\"col-2 col-md-2\">\n        <button class=\"btn btn-outline-primary\" type=\"button\">Add New Category</button>\n    </div>\n  </div>\n\n  <!-- Adding form -->\n  <div *ngIf=\"false\" class=\"row\">\n    <div class=\"offset-md-4 col-md-4 custom-form\">\n      <form>\n        <div class=\"form-row d-flex justify-content-between\">\n          <div class=\"form-group col-md-5\">\n            <label for=\"categoryName\">Name</label>\n            <input type=\"text\" class=\"form-control\" id=\"categoryName\" placeholder=\"Name\">\n          </div>\n          <div class=\"form-group col-md-2\">\n            <label for=\"categoryColor\">Color</label>\n            <input type=\"color\" class=\"form-control\" id=\"categoryColor\" placeholder=\"Color\">\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"categoryDescription\">Description</label>\n          <textarea class=\"form-control\" id=\"categoryDescription\" rows=\"3\"></textarea>\n        </div>\n\n        <div class=\"form-row\">\n            <div class=\"form-group offset-md-8 col-md-4 d-flex flex-row-reverse\">\n                <button type=\"button\" class=\"btn btn-primary ml-2\" >Save</button>\n                <button type=\"button\" class=\"btn btn-danger\">Cancel</button>\n            </div>\n        </div>\n        \n      </form>\n    </div>  \n  </div>\n</div>\n\n<!-- Table of Categories -->\n<div *ngIf='false'>\n    <table class=\"table table-hover\">\n        <thead>\n          <tr>\n            <th class=\"text-center\" scope=\"row\"> \n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th scope=\"col\"  width=\"10%\">#</th>\n            <th scope=\"col\"  width=\"15%\">Name</th>\n            <th scope=\"col\"  width=\"15%\">Color</th>\n            <th scope=\"col\"  width=\"40%\">Description</th>\n            <th  width=\"15%\">\n              <div class=\"d-flex flex-row-reverse mr-3\">\n                <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n                </button>\n              </div>\n              \n            </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let category of categories | paginate: { itemsPerPage: 10, currentPage: p } ; let index = index;\">\n            <th class=\"text-center\" width=\"10%\" scope=\"row\"> \n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th width=\"10%\" scope=\"row\">{{category.number}}</th>\n            <td width=\"15%\">{{category.name}}</td>\n            <td width=\"15%\" [ngStyle]=\"{'color':category.color}\">{{category.color}}</td>\n            <td width=\"40%\">{{category.description}}</td>\n            <td width=\"15%\">\n              <div class=\"d-flex flex-row-reverse mr-3\">\n                <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n                </button>\n                \n                <button style=\"background-color:transparent;border:none\">\n                    <fa-icon [icon]=\"edit\" class=\"main-color\"></fa-icon>\n                </button>\n              </div>\n            </td>\n          </tr>\n        </tbody>\n    </table>\n    <div class=\"mt-4 d-flex justify-content-around\">\n      <div>\n        <label class=\"custom-label main-color mr-2\">Results Per Page:</label>\n        <select class='custom-select'>\n          <option value=\"10\">10</option>\n          <option value=\"20\">20</option>\n          <option value=\"50\">50</option>\n          <option value=\"100\">100</option>\n        </select>\n      </div>\n      <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\n    </div>\n    \n</div>\n\n\n\n<!-- Empty category table -->\n<div class=\"row mt-5\">\n  <div class=\"column offset-md-3 col-md-6\">\n    <div class=\"card\" style=\"border-color:red\">\n      <div class=\"card-body d-flex justify-content-around\">\n        <p class=\"card-text\" style=\"color:red\">There are no categories, let's add the first one.</p>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<!-- Adding new category -->\n<div class=\"mt-3 mb-4\" style=\"overflow-x: hidden;\">\n  <div class=\"row mb-3\">\n    <div class=\"col-sm-10\">\n    </div>\n    <div class=\"col-sm-2\">\n        <button class=\"btn btn-outline-primary\" type=\"button\" style=\"font-size:15px;\">New Category</button>\n    </div>\n  </div>\n\n  <!-- Adding form -->\n  <div *ngIf=\"true\" class=\"row\">\n    <div class=\"offset-md-4 col-md-4 custom-form\">\n      <form [formGroup]=\"newCategoryForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"form-row d-flex justify-content-between\">\n          <div class=\"form-group col-md-5\">\n            <label>Name</label>\n            <input\n              type=\"text\"\n              class=\"form-control\"\n              placeholder=\"Name\"\n              formControlName=\"name\"\n              [ngClass]=\"{'app-invalid': !newCategoryForm.controls['name'].valid && newCategoryForm.controls['name'].touched}\">\n          </div>\n          <div class=\"form-group col-md-2\">\n            <label for=\"categoryColor\">Color</label>\n            <input type=\"color\" class=\"form-control\"  placeholder=\"Color\" formControlName=\"color\">\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"categoryDescription\">Description</label>\n          <textarea\n            class=\"form-control\"\n            rows=\"3\"\n            formControlName=\"description\"\n            [ngClass]=\"{'app-invalid': !newCategoryForm.controls['description'].valid && newCategoryForm.controls['description'].touched}\">\n          </textarea>\n        </div>\n\n        <div class=\"form-row\">\n            <div class=\"form-group offset-md-8 col-md-4 d-flex flex-row-reverse\">\n                <button type=\"submit\" [disabled]=\"!newCategoryForm.valid\" class=\"btn btn-primary ml-2\" >Save</button>\n                <button type=\"button\" class=\"btn btn-danger\">Cancel</button>\n            </div>\n        </div>\n\n      </form>\n    </div>\n  </div>\n</div>\n\n<!-- Table of Categories -->\n<div *ngIf='false'>\n    <table class=\"table table-hover\">\n        <thead>\n          <tr>\n            <th class=\"text-center\" scope=\"row\">\n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th scope=\"col\"  width=\"10%\">#</th>\n            <th scope=\"col\"  width=\"15%\">Name</th>\n            <th scope=\"col\"  width=\"15%\">Color</th>\n            <th scope=\"col\"  width=\"40%\">Description</th>\n            <th  width=\"15%\">\n              <div class=\"d-flex flex-row-reverse mr-3\">\n                <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n                </button>\n              </div>\n\n            </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let category of categories | paginate: { itemsPerPage: 10, currentPage: p } ; let index = index;\">\n            <th class=\"text-center\" width=\"10%\" scope=\"row\">\n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th width=\"10%\" scope=\"row\">{{category.number}}</th>\n            <td width=\"15%\">{{category.name}}</td>\n            <td width=\"15%\" [ngStyle]=\"{'color':category.color}\">{{category.color}}</td>\n            <td width=\"40%\">{{category.description}}</td>\n            <td width=\"15%\">\n              <div class=\"d-flex flex-row-reverse mr-3\">\n                <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n                </button>\n\n                <button style=\"background-color:transparent;border:none\">\n                    <fa-icon [icon]=\"edit\" class=\"main-color\"></fa-icon>\n                </button>\n              </div>\n            </td>\n          </tr>\n        </tbody>\n    </table>\n    <div class=\"mt-4 d-flex justify-content-around\">\n      <div>\n        <label class=\"custom-label main-color mr-2\">Results Per Page:</label>\n        <select class='custom-select'>\n          <option value=\"10\">10</option>\n          <option value=\"20\">20</option>\n          <option value=\"50\">50</option>\n          <option value=\"100\">100</option>\n        </select>\n      </div>\n      <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\n    </div>\n\n</div>\n\n\n\n<!-- Empty category table -->\n<div class=\"row mt-5\">\n  <div class=\"column offset-md-3 col-md-6\">\n    <div class=\"card\" style=\"border-color:red\">\n      <div class=\"card-body d-flex justify-content-around\">\n        <p class=\"card-text\" style=\"color:red\">There are no categories, let's add the first one.</p>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -221,17 +230,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoriesComponent", function() { return CategoriesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 
+
+// Form.
+
+// Http.
 
 // Importing icons.
 
 var CategoriesComponent = /** @class */ (function () {
-    function CategoriesComponent() {
+    function CategoriesComponent(fb, http) {
+        this.fb = fb;
+        this.http = http;
         // Icons.
-        this.trash = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faTrash"];
-        this.edit = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faEdit"];
+        this.trash = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faTrash"];
+        this.edit = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faEdit"];
+        // Form.
+        // Building Form.
+        this.newCategoryForm = this.fb.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            color: ['black'],
+        });
+        // Controls.
+        this.showNewCategoryForm = true;
     }
+    // submit.
+    CategoriesComponent.prototype.onSubmit = function () {
+        console.log('Inside onSubmit function');
+        // preparing the new category data.
+        var newCategory = {
+            name: this.newCategoryForm.controls['name'].value.trim(),
+            description: this.newCategoryForm.controls['description'].value.trim(),
+            color: this.newCategoryForm.controls['color'].value.trim(),
+            number: 0 //Will ignored by the server.
+        };
+        console.log('newCategory: ', newCategory);
+        this.http.post('category/createCategory', newCategory).subscribe(function (data) {
+            console.log('returned data: ', data);
+        });
+    };
     CategoriesComponent.prototype.ngOnInit = function () {
         // initalizing categories.
         this.categories = [
@@ -315,7 +356,7 @@ var CategoriesComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./categories.component.html */ "./src/app/categories/categories.component.html"),
             styles: [__webpack_require__(/*! ./categories.component.css */ "./src/app/categories/categories.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
     ], CategoriesComponent);
     return CategoriesComponent;
 }());

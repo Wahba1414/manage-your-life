@@ -7,7 +7,7 @@ var router = express.Router();
 var controller = require("../../controllers/category.controller");
 
 module.exports = function (app) {
-  app.use('/category', router);
+  app.use('category', router);
 };
 
 //adding the needed routes.

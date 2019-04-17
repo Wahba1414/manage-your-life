@@ -1,7 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
+
+
 
 // Icons.
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -28,7 +33,10 @@ import { CoreComponent } from './core/core.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
