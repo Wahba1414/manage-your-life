@@ -214,7 +214,7 @@ module.exports = ".custom-select{\n    width:60px;\n    height: 35px;\n}\n\n.cus
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Adding new category -->\n<div class=\"mt-3 mb-4\" style=\"overflow-x: hidden;\">\n  <div class=\"row mb-3\">\n    <div class=\"col-sm-10\">\n    </div>\n    <div class=\"col-sm-2\">\n        <button class=\"btn btn-outline-primary\" type=\"button\" style=\"font-size:15px;\">New Category</button>\n    </div>\n  </div>\n\n  <!-- Adding form -->\n  <div *ngIf=\"true\" class=\"row\">\n    <div class=\"offset-md-4 col-md-4 custom-form\">\n      <form [formGroup]=\"newCategoryForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"form-row d-flex justify-content-between\">\n          <div class=\"form-group col-md-5\">\n            <label>Name</label>\n            <input\n              type=\"text\"\n              class=\"form-control\"\n              placeholder=\"Name\"\n              formControlName=\"name\"\n              [ngClass]=\"{'app-invalid': !newCategoryForm.controls['name'].valid && newCategoryForm.controls['name'].touched}\">\n          </div>\n          <div class=\"form-group col-md-2\">\n            <label for=\"categoryColor\">Color</label>\n            <input type=\"color\" class=\"form-control\"  placeholder=\"Color\" formControlName=\"color\">\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"categoryDescription\">Description</label>\n          <textarea\n            class=\"form-control\"\n            rows=\"3\"\n            formControlName=\"description\"\n            [ngClass]=\"{'app-invalid': !newCategoryForm.controls['description'].valid && newCategoryForm.controls['description'].touched}\">\n          </textarea>\n        </div>\n\n        <div class=\"form-row\">\n            <div class=\"form-group offset-md-8 col-md-4 d-flex flex-row-reverse\">\n                <button type=\"submit\" [disabled]=\"!newCategoryForm.valid\" class=\"btn btn-primary ml-2\" >Save</button>\n                <button type=\"button\" class=\"btn btn-danger\">Cancel</button>\n            </div>\n        </div>\n\n      </form>\n    </div>\n  </div>\n</div>\n\n<!-- Table of Categories -->\n<div *ngIf='false'>\n    <table class=\"table table-hover\">\n        <thead>\n          <tr>\n            <th class=\"text-center\" scope=\"row\">\n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th scope=\"col\"  width=\"10%\">#</th>\n            <th scope=\"col\"  width=\"15%\">Name</th>\n            <th scope=\"col\"  width=\"15%\">Color</th>\n            <th scope=\"col\"  width=\"40%\">Description</th>\n            <th  width=\"15%\">\n              <div class=\"d-flex flex-row-reverse mr-3\">\n                <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n                </button>\n              </div>\n\n            </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let category of categories | paginate: { itemsPerPage: 10, currentPage: p } ; let index = index;\">\n            <th class=\"text-center\" width=\"10%\" scope=\"row\">\n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th width=\"10%\" scope=\"row\">{{category.number}}</th>\n            <td width=\"15%\">{{category.name}}</td>\n            <td width=\"15%\" [ngStyle]=\"{'color':category.color}\">{{category.color}}</td>\n            <td width=\"40%\">{{category.description}}</td>\n            <td width=\"15%\">\n              <div class=\"d-flex flex-row-reverse mr-3\">\n                <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n                </button>\n\n                <button style=\"background-color:transparent;border:none\">\n                    <fa-icon [icon]=\"edit\" class=\"main-color\"></fa-icon>\n                </button>\n              </div>\n            </td>\n          </tr>\n        </tbody>\n    </table>\n    <div class=\"mt-4 d-flex justify-content-around\">\n      <div>\n        <label class=\"custom-label main-color mr-2\">Results Per Page:</label>\n        <select class='custom-select'>\n          <option value=\"10\">10</option>\n          <option value=\"20\">20</option>\n          <option value=\"50\">50</option>\n          <option value=\"100\">100</option>\n        </select>\n      </div>\n      <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\n    </div>\n\n</div>\n\n\n\n<!-- Empty category table -->\n<div class=\"row mt-5\">\n  <div class=\"column offset-md-3 col-md-6\">\n    <div class=\"card\" style=\"border-color:red\">\n      <div class=\"card-body d-flex justify-content-around\">\n        <p class=\"card-text\" style=\"color:red\">There are no categories, let's add the first one.</p>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<!-- Adding new category -->\n<div class=\"mt-3 mb-4\" style=\"overflow-x: hidden;\">\n  <div class=\"row mb-3\">\n    <div class=\"col-sm-10\">\n    </div>\n    <div class=\"col-sm-2\">\n        <button class=\"btn btn-outline-primary\" type=\"button\" style=\"font-size:15px;\" (click)=\"showCategoryForm()\">New Category</button>\n    </div>\n  </div>\n\n  <!-- Adding form -->\n  <div *ngIf=\"showNewCategoryForm\" class=\"row\">\n    <div class=\"offset-md-4 col-md-4 custom-form\">\n      <form [formGroup]=\"newCategoryForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"form-row d-flex justify-content-between\">\n          <div class=\"form-group col-md-5\">\n            <label>Name</label>\n            <input\n              type=\"text\"\n              class=\"form-control\"\n              placeholder=\"Name\"\n              formControlName=\"name\"\n              [ngClass]=\"{'app-invalid': !newCategoryForm.controls['name'].valid && newCategoryForm.controls['name'].touched}\">\n          </div>\n          <div class=\"form-group col-md-2\">\n            <label for=\"categoryColor\">Color</label>\n            <input type=\"color\" class=\"form-control\"  placeholder=\"Color\" formControlName=\"color\">\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"categoryDescription\">Description</label>\n          <textarea\n            class=\"form-control\"\n            rows=\"3\"\n            formControlName=\"description\"\n            [ngClass]=\"{'app-invalid': !newCategoryForm.controls['description'].valid && newCategoryForm.controls['description'].touched}\">\n          </textarea>\n        </div>\n\n        <div class=\"form-row\">\n            <div class=\"form-group offset-md-8 col-md-4 d-flex flex-row-reverse\">\n                <button type=\"submit\" [disabled]=\"!newCategoryForm.valid\" class=\"btn btn-primary ml-2\" >Save</button>\n                <button type=\"button\" class=\"btn btn-danger\" (click)=\"hideCategoryForm()\">Cancel</button>\n            </div>\n        </div>\n\n      </form>\n    </div>\n  </div>\n</div>\n\n<!-- Table of Categories -->\n<div *ngIf=\"categories.length !== 0\">\n    <table class=\"table table-hover\">\n        <thead>\n          <tr>\n            <th class=\"text-center\" scope=\"row\">\n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th scope=\"col\"  width=\"10%\">#</th>\n            <th scope=\"col\"  width=\"15%\">Name</th>\n            <th scope=\"col\"  width=\"15%\">Color</th>\n            <th scope=\"col\"  width=\"40%\">Description</th>\n            <th  width=\"15%\">\n              <div class=\"d-flex flex-row-reverse mr-3\">\n                <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n                </button>\n              </div>\n\n            </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let category of categories | paginate: { itemsPerPage: 10, currentPage: p } ; let index = index;\">\n            <th class=\"text-center\" width=\"10%\" scope=\"row\">\n              <input type=\"checkbox\" class=\"\" id=\"\">\n            </th>\n            <th width=\"10%\" scope=\"row\">{{category.number}}</th>\n            <td width=\"15%\">{{category.name}}</td>\n            <td width=\"15%\" [ngStyle]=\"{'color':category.color}\">{{category.color}}</td>\n            <td width=\"40%\">{{category.description}}</td>\n            <td width=\"15%\">\n              <div class=\"d-flex flex-row-reverse mr-3\">\n                <button style=\"background-color:transparent;border:none\">\n                  <fa-icon [icon]=\"trash\" style=\"color:red\"></fa-icon>\n                </button>\n\n                <button style=\"background-color:transparent;border:none\">\n                    <fa-icon [icon]=\"edit\" class=\"main-color\"></fa-icon>\n                </button>\n              </div>\n            </td>\n          </tr>\n        </tbody>\n    </table>\n    <div class=\"mt-4 d-flex justify-content-around\">\n      <div>\n        <label class=\"custom-label main-color mr-2\">Results Per Page:</label>\n        <select class='custom-select'>\n          <option value=\"10\">10</option>\n          <option value=\"20\">20</option>\n          <option value=\"50\">50</option>\n          <option value=\"100\">100</option>\n        </select>\n      </div>\n      <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\n    </div>\n\n</div>\n\n\n\n<!-- Empty category table -->\n<div class=\"row mt-5\" *ngIf=\"categories.length === 0\">\n  <div class=\"column offset-md-3 col-md-6\">\n    <div class=\"card\" style=\"border-color:red\">\n      <div class=\"card-body d-flex justify-content-around\">\n        <p class=\"card-text\" style=\"color:red\">There are no categories, let's add the first one.</p>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -248,6 +248,9 @@ var CategoriesComponent = /** @class */ (function () {
         // Icons.
         this.trash = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faTrash"];
         this.edit = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faEdit"];
+        // declaration.
+        // List data.
+        this.categories = [];
         // Form.
         // Building Form.
         this.newCategoryForm = this.fb.group({
@@ -256,10 +259,11 @@ var CategoriesComponent = /** @class */ (function () {
             color: ['black'],
         });
         // Controls.
-        this.showNewCategoryForm = true;
+        this.showNewCategoryForm = false;
     }
     // submit.
     CategoriesComponent.prototype.onSubmit = function () {
+        var _this = this;
         console.log('Inside onSubmit function');
         // preparing the new category data.
         var newCategory = {
@@ -270,85 +274,29 @@ var CategoriesComponent = /** @class */ (function () {
         };
         console.log('newCategory: ', newCategory);
         this.http.post('category/createCategory', newCategory).subscribe(function (data) {
-            console.log('returned data: ', data);
+            // Reset form.
+            _this.newCategoryForm.reset();
+            // Refresh.
+            _this.getCategories();
         });
+    };
+    // Tables.
+    CategoriesComponent.prototype.getCategories = function () {
+        var _this = this;
+        console.log('Inside getCategories function');
+        this.http.get('category/getCategories').subscribe(function (data) {
+            _this.categories = data.categories;
+        });
+    };
+    CategoriesComponent.prototype.showCategoryForm = function () {
+        this.showNewCategoryForm = true;
+    };
+    CategoriesComponent.prototype.hideCategoryForm = function () {
+        this.showNewCategoryForm = false;
     };
     CategoriesComponent.prototype.ngOnInit = function () {
         // initalizing categories.
-        this.categories = [
-            {
-                name: 'work',
-                color: 'red',
-                number: 1,
-                description: 'Manging Work tasks'
-            },
-            {
-                name: 'personal',
-                color: 'blue',
-                number: 2,
-                description: 'Manging personal tasks'
-            },
-            {
-                name: 'work',
-                color: 'red',
-                number: 1,
-                description: 'Manging Work tasks'
-            },
-            {
-                name: 'personal',
-                color: 'blue',
-                number: 2,
-                description: 'Manging personal tasks'
-            },
-            {
-                name: 'work',
-                color: 'red',
-                number: 1,
-                description: 'Manging Work tasks'
-            },
-            {
-                name: 'personal',
-                color: 'blue',
-                number: 2,
-                description: 'Manging personal tasks'
-            },
-            {
-                name: 'work',
-                color: 'red',
-                number: 1,
-                description: 'Manging Work tasks'
-            },
-            {
-                name: 'personal',
-                color: 'blue',
-                number: 2,
-                description: 'Manging personal tasks'
-            },
-            {
-                name: 'work',
-                color: 'red',
-                number: 1,
-                description: 'Manging Work tasks'
-            },
-            {
-                name: 'personal',
-                color: 'blue',
-                number: 2,
-                description: 'Manging personal tasks'
-            },
-            {
-                name: 'work',
-                color: 'red',
-                number: 1,
-                description: 'Manging Work tasks'
-            },
-            {
-                name: 'personal',
-                color: 'blue',
-                number: 2,
-                description: 'Manging personal tasks'
-            }
-        ];
+        this.getCategories();
     };
     CategoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

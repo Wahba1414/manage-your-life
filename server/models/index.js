@@ -1,6 +1,11 @@
 'use strict';
 
 var mongoose = require('mongoose');
+
+// adding the global plugins.
+var update_dates = require('../db_plugins/update_dates');
+mongoose.plugin(update_dates);
+
 var Q = require('q');
 
 //rewuiring the needed modules.
@@ -37,18 +42,21 @@ connectionsInfo.mean_template.counter = connectionsCounter;
 connectionsCounter++;
 
 
-//Adding the needed models.
-var results = filesUtilis.addModelstoDatabase(connectionsInfo.mean_template.connection,'models',"_model.js");
-if(!results.success){
-    console.log("there are some models have some problems")
-    //exit with failure
-    process.exit(1)
-}
+
 
 //Adding the needed events.
 connectionsInfo.mean_template.connection.on('connected' , function(){
     console.log("mean_template db is connected now...");
     connectionsDefers[connectionsInfo.mean_template.counter].resolve();
+
+    // Hint: adding these models here to can access the db conn inside.
+    //Adding the needed models.
+    var results = filesUtilis.addModelstoDatabase(connectionsInfo.mean_template.connection,'models',"_model.js");
+    if(!results.success){
+        console.log("there are some models have some problems")
+        //exit with failure
+        process.exit(1)
+    }
 });
 
 connectionsInfo.mean_template.connection.on('error' , function(error){

@@ -27,7 +27,7 @@ export class CategoriesComponent implements OnInit {
   // declaration.
 
   // List data.
-  categories: Category[];
+  categories: Category[] = [];
 
   // Form.
   // Building Form.
@@ -51,13 +51,32 @@ export class CategoriesComponent implements OnInit {
     console.log('newCategory: ' , newCategory);
 
     this.http.post('category/createCategory',newCategory).subscribe((data:any) => {
-      console.log('returned data: ' , data);
+      // Reset form.
+      this.newCategoryForm.reset();
+      // Refresh.
+      this.getCategories();
     })
   }
 
 
+  // Tables.
+  getCategories(){
+    console.log('Inside getCategories function');
+    this.http.get('category/getCategories').subscribe((data:any) => {
+      this.categories = data.categories;
+    })
+  }
+
   // Controls.
-  showNewCategoryForm:Boolean = true;
+  showNewCategoryForm:Boolean = false;
+
+  showCategoryForm(){
+    this.showNewCategoryForm = true;
+  }
+
+  hideCategoryForm(){
+    this.showNewCategoryForm = false;
+  }
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
 
@@ -65,80 +84,7 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {
     // initalizing categories.
-    this. categories = [
-      {
-        name: 'work',
-        color:'red',
-        number:1,
-        description:'Manging Work tasks'
-      },
-      {
-        name: 'personal',
-        color:'blue',
-        number:2,
-        description:'Manging personal tasks'
-      },
-      {
-        name: 'work',
-        color:'red',
-        number:1,
-        description:'Manging Work tasks'
-      },
-      {
-        name: 'personal',
-        color:'blue',
-        number:2,
-        description:'Manging personal tasks'
-      },
-      {
-        name: 'work',
-        color:'red',
-        number:1,
-        description:'Manging Work tasks'
-      },
-      {
-        name: 'personal',
-        color:'blue',
-        number:2,
-        description:'Manging personal tasks'
-      },
-      {
-        name: 'work',
-        color:'red',
-        number:1,
-        description:'Manging Work tasks'
-      },
-      {
-        name: 'personal',
-        color:'blue',
-        number:2,
-        description:'Manging personal tasks'
-      },
-      {
-        name: 'work',
-        color:'red',
-        number:1,
-        description:'Manging Work tasks'
-      },
-      {
-        name: 'personal',
-        color:'blue',
-        number:2,
-        description:'Manging personal tasks'
-      },
-      {
-        name: 'work',
-        color:'red',
-        number:1,
-        description:'Manging Work tasks'
-      },
-      {
-        name: 'personal',
-        color:'blue',
-        number:2,
-        description:'Manging personal tasks'
-      }
-    ]
+    this.getCategories();
   }
 
 }
