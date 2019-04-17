@@ -149,6 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
 /* harmony import */ var _statistics_statistics_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./statistics/statistics.component */ "./src/app/statistics/statistics.component.ts");
 /* harmony import */ var _core_core_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./core/core.component */ "./src/app/core/core.component.ts");
+/* harmony import */ var _configs_notifier__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./configs/notifier */ "./src/app/configs/notifier.ts");
 
 
 
@@ -166,6 +167,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+// Import notifier configs.
 
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -187,7 +190,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                angular_notifier__WEBPACK_IMPORTED_MODULE_5__["NotifierModule"]
+                angular_notifier__WEBPACK_IMPORTED_MODULE_5__["NotifierModule"].withConfig(_configs_notifier__WEBPACK_IMPORTED_MODULE_14__["default"])
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
@@ -333,6 +336,60 @@ var CategoriesComponent = /** @class */ (function () {
     return CategoriesComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/configs/notifier.ts":
+/*!*************************************!*\
+  !*** ./src/app/configs/notifier.ts ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var customNotifierOptions = {
+    position: {
+        horizontal: {
+            position: 'right',
+            distance: 12
+        },
+        vertical: {
+            position: 'top',
+            distance: 12,
+            gap: 10
+        }
+    },
+    theme: 'material',
+    behaviour: {
+        autoHide: 3000,
+        onClick: 'hide',
+        onMouseover: 'pauseAutoHide',
+        showDismissButton: true,
+        stacking: 4
+    },
+    animations: {
+        enabled: true,
+        show: {
+            preset: 'slide',
+            speed: 300,
+            easing: 'ease'
+        },
+        hide: {
+            preset: 'fade',
+            speed: 300,
+            easing: 'ease',
+            offset: 50
+        },
+        shift: {
+            speed: 300,
+            easing: 'ease'
+        },
+        overlap: 150
+    }
+};
+/* harmony default export */ __webpack_exports__["default"] = (customNotifierOptions);
 
 
 /***/ }),

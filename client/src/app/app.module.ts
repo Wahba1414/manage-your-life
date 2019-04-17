@@ -24,6 +24,9 @@ import { CategoriesComponent } from './categories/categories.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CoreComponent } from './core/core.component';
 
+// Import notifier configs.
+import customNotifierOptions from './configs/notifier';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +43,7 @@ import { CoreComponent } from './core/core.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NotifierModule
+    NotifierModule.withConfig(customNotifierOptions)
   ],
   providers: [],
   bootstrap: [AppComponent]
